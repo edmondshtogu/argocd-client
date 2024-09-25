@@ -57,6 +57,8 @@ type AppProjectStatus struct {
 // * who can access these applications (roles, OIDC group claims bindings)
 // * and what they can do (RBAC policies)
 // * automation access to these roles (JWT tokens)
+// +genclient
+// +genclient:noStatus
 // +kubebuilder:object:root=true
 // +kubebuilder:subresource:status
 type AppProject struct {

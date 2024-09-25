@@ -1,6 +1,7 @@
 package v1alpha1
 
 import (
+	"github.com/edmondshtogu/argocd-client/pkg/apis"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -8,10 +9,10 @@ import (
 
 var (
 	// SchemeGroupVersion is group version used to register these objects
-	SchemeGroupVersion                   = schema.GroupVersion{Group: api.Group, Version: "v1alpha1"}
-	ApplicationSchemaGroupVersionKind    = schema.GroupVersionKind{Group: api.Group, Version: "v1alpha1", Kind: api.ApplicationKind}
-	AppProjectSchemaGroupVersionKind     = schema.GroupVersionKind{Group: api.Group, Version: "v1alpha1", Kind: api.AppProjectKind}
-	ApplicationSetSchemaGroupVersionKind = schema.GroupVersionKind{Group: api.Group, Version: "v1alpha1", Kind: api.ApplicationSetKind}
+	SchemeGroupVersion                   = schema.GroupVersion{Group: apis.Group, Version: "v1alpha1"}
+	ApplicationSchemaGroupVersionKind    = schema.GroupVersionKind{Group: apis.Group, Version: "v1alpha1", Kind: apis.ApplicationKind}
+	AppProjectSchemaGroupVersionKind     = schema.GroupVersionKind{Group: apis.Group, Version: "v1alpha1", Kind: apis.AppProjectKind}
+	ApplicationSetSchemaGroupVersionKind = schema.GroupVersionKind{Group: apis.Group, Version: "v1alpha1", Kind: apis.ApplicationSetKind}
 )
 
 // Resource takes an unqualified resource and returns a Group-qualified GroupResource.
